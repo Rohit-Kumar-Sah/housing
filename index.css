@@ -54,7 +54,9 @@ a{
 }
 
 /* search section */
-
+.mlocation,.mlocationText,.mlogo{
+    display: none;
+}
 .screenL{
     display: inline-block;
 }
@@ -382,7 +384,7 @@ a{
 
 /* footer */
 .footer{
-    background: rgb(44, 44, 58);
+    background: #000;
     color: #fff;
 }
 .footer .footerwrap{
@@ -448,7 +450,62 @@ a{
 .scanQR span{
     width: 100px;
 }
+.mplaces{
+    display: none;
+}
+
 @media screen and (max-width:1023px){
+    .search_panel{
+        height: 400px;
+    }
+    .header,.search_section_title,.d_view{
+        display: none;
+    }
+    .mlogo{
+        display: block;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+    .mlocation{
+        display: flex;
+        left: 15%;
+        top: 10%;
+        transform: translateX(-50%);
+        position: absolute;
+        padding: 10px ;
+        backdrop-filter: blur(22px);
+        background: rgba(0,0,0,.35);
+        border-radius: 52px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        opacity: .87;
+    }
+    .mapMarker{
+        margin-right: 10px;
+        height: 16px;
+    }
+    .down_Arrow{
+        margin-left: 10px;
+        height: 16px;
+    }
+    .mlocationText{
+        display: block;
+        left: 50%;
+        top: 35%;
+        transform: translateX(-50%);
+        position: absolute;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px rgb(0 0 0 / 51%);
+        color: #fff;
+        font-weight: bold;
+    }
+    .mlocationText .userlocation{
+        border-bottom: 1px dashed #fff;
+    }
     .footerwrap > .Col ,.footerSection , .social {
         flex: 1 1 100%;
         margin-bottom: 20px;
@@ -507,6 +564,15 @@ a{
     {
         overflow-x: scroll;
         padding-bottom: 15px;
+    }
+    .mplaces{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        height: 100vw;
+        width: 100vw;
+        display: block;
     }
 }
 @media screen and (max-width:768px) {

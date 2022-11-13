@@ -1,4 +1,10 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+  //location selected information
+  document.querySelector("#userCity").addEventListener("change", (e) => {
+    let location = document.querySelector("#userCity").value;
+    document.querySelector(".userLocation").innerText = location;
+  });
+  //carousel right arrow handler
   document.querySelectorAll(".right_arrow").forEach((ele) => {
     ele.addEventListener("click", (e) => {
       let thecardWidth = e.target.parentNode
@@ -21,6 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
+  //carousel left arrow handler
   document.querySelectorAll(".left_arrow").forEach((ele) => {
     ele.addEventListener("click", (e) => {
       let thecardWidth = e.target.parentNode
@@ -68,8 +75,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let lastCardEnd =
       lastCard.getBoundingClientRect().x +
       lastCard.getBoundingClientRect().width;
-
-    if (Math.round(firstCardStart) >= Math.random(currentCarouselStart)) {
+    if (Math.round(firstCardStart) >= Math.round(currentCarouselStart)) {
       //first card visible , hide left arrow
       leftArrow.style.display = "none";
     } else {
