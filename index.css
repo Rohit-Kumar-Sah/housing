@@ -420,6 +420,7 @@ p.hamburger img {
     white-space: nowrap;
     font-size: 14px;
     color: #333;
+    margin-bottom: 10px;
 }
 .footerwrap > .Col{
     margin: 0 auto;
