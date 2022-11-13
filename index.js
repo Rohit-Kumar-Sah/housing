@@ -102,11 +102,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.querySelector(".cross").addEventListener("click", (e) => {
     mplaces.style.display = "none";
     [...document.body.children].forEach((ele) => {
-      if (!ele.classList.contains("mplaces")) {
+      if (
+        !ele.classList.contains("mplaces") &&
+        !ele.classList.contains("quickNavOverlay") &&
+        !ele.classList.contains("quickNavContent")
+      ) {
         ele.style.display = "block";
       }
     });
   });
+
+  // hamburger
   document.querySelector(".hamburger").addEventListener("click", (e) => {
     document.querySelector(".quickNavOverlay").style.display = "block";
     document.querySelector(".quickNavContent").style.display = "block";
