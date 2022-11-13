@@ -450,10 +450,88 @@ a{
 .scanQR span{
     width: 100px;
 }
+/* mobile location overlays */
 .mplaces{
     display: none;
 }
-
+.cross{
+    color: #fff;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #5e23dc;
+    font-size: 25px;
+    position: fixed;
+}
+.overlay_leftArrow{
+    height: 22px;
+    margin: 0 20px;
+}
+.mplaces .content{
+    background-color: #d7d8de;
+    padding: 24px 16px;
+    margin-top: 60px;
+}
+.gpsIcon img{
+    height: 17px;
+}
+.searchBar{
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 87vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+}
+.msearch{
+    flex: 1 0 33%;
+    border: none;
+    margin: 0 12px;
+}
+.mpopularCities {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.mPopularCityTitle,.mOtherCities{
+    margin: 10px 22px;
+    color: #5a5a64;
+}
+.mpopularCities p {
+    
+    display: flex;
+    align-items: center;
+    flex: 1 1 34%;
+    margin: 0 10px 10px;
+    background-color: #fff;
+    padding: 20px 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.mPopularCitiesCard img{
+    margin: 0  20px 0 5px  ;
+}
+.mOtherCitiesList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 10px 10px;
+}
+.mOtherCityCard{
+    color: #333;
+    flex: 1 1 34%;
+    margin: 0 10px 10px;
+}
 @media screen and (max-width:1023px){
     .search_panel{
         height: 400px;
@@ -572,7 +650,7 @@ a{
         background-color: #fff;
         height: 100vw;
         width: 100vw;
-        display: block;
+        
     }
 }
 @media screen and (max-width:768px) {

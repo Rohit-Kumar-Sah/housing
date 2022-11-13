@@ -88,4 +88,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
       rightArrow.style.display = "block";
     }
   }
+
+  //open mobile city overlay
+  let mplaces = document.querySelector(".mplaces");
+  document.querySelector(".mlocation").addEventListener("click", (e) => {
+    mplaces.style.display = "block";
+    [...document.body.children].forEach((ele) => {
+      if (!ele.classList.contains("mplaces")) {
+        ele.style.display = "none";
+      }
+    });
+  });
+  document.querySelector(".cross").addEventListener("click", (e) => {
+    mplaces.style.display = "none";
+    [...document.body.children].forEach((ele) => {
+      if (!ele.classList.contains("mplaces")) {
+        ele.style.display = "block";
+      }
+    });
+  });
 });
