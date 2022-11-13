@@ -107,4 +107,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   });
+  document.querySelector(".hamburger").addEventListener("click", (e) => {
+    document.querySelector(".quickNavOverlay").style.display = "block";
+    document.querySelector(".quickNavContent").style.display = "block";
+    document.body.style.overflow = "hidden";
+  });
+  document.querySelector(".quickNavOverlay").addEventListener("click", (e) => {
+    document.querySelector(".quickNavOverlay").style.display = "none";
+    document.querySelector(".quickNavContent").style.display = "none";
+    document.body.style.overflow = "unset";
+  });
 });
