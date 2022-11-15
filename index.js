@@ -1,11 +1,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   //location selected information
-  document.querySelector("#userCity").addEventListener("change", (e) => {
+  document.querySelector("#userCity")?.addEventListener("change", (e) => {
     let location = document.querySelector("#userCity").value;
     document.querySelector(".userLocation").innerText = location;
   });
   //carousel right arrow handler
-  document.querySelectorAll(".right_arrow").forEach((ele) => {
+  document.querySelectorAll(".right_arrow")?.forEach((ele) => {
     ele.addEventListener("click", (e) => {
       let thecardWidth = e.target.parentNode
         .querySelector(".card")
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   //carousel left arrow handler
-  document.querySelectorAll(".left_arrow").forEach((ele) => {
+  document.querySelectorAll(".left_arrow")?.forEach((ele) => {
     ele.addEventListener("click", (e) => {
       let thecardWidth = e.target.parentNode
         .querySelector(".card")
@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   //open mobile city overlay
   let mplaces = document.querySelector(".mplaces");
-  document.querySelector(".mlocation").addEventListener("click", (e) => {
+  document.querySelector(".mlocation")?.addEventListener("click", (e) => {
     mplaces.style.display = "block";
     [...document.body.children].forEach((ele) => {
       if (!ele.classList.contains("mplaces")) {
@@ -99,7 +99,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   });
-  document.querySelector(".cross").addEventListener("click", (e) => {
+  document.querySelector(".cross")?.addEventListener("click", (e) => {
     mplaces.style.display = "none";
     [...document.body.children].forEach((ele) => {
       if (
@@ -113,12 +113,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // hamburger
-  document.querySelector(".hamburger").addEventListener("click", (e) => {
+  document.querySelector(".hamburger")?.addEventListener("click", (e) => {
     document.querySelector(".quickNavOverlay").style.display = "block";
     document.querySelector(".quickNavContent").style.display = "block";
     document.body.style.overflow = "hidden";
   });
-  document.querySelector(".quickNavOverlay").addEventListener("click", (e) => {
+  document.querySelector(".quickNavOverlay")?.addEventListener("click", (e) => {
     document.querySelector(".quickNavOverlay").style.display = "none";
     document.querySelector(".quickNavContent").style.display = "none";
     document.body.style.overflow = "unset";
