@@ -109,6 +109,9 @@ p.hamburger img {
 .screenL{
     display: inline-block;
 }
+.screenLBlock{
+    display: block;
+}
 .search_panel{
     max-width: 1500px;
     background-color: #0d57cdde;
@@ -731,7 +734,7 @@ p.hamburger img {
     .footer div p {
         width: 100%;
     }
-    .screenL{
+    .screenL,.screenLBlock{
         display: none;
     }
     .search_container form{
@@ -793,7 +796,7 @@ p.hamburger img {
     }
     .recently_added_cards,
     .featured_project_cards,
-    .news_project_cards
+    .news_project_cards,.scrollspy .cards
     {
         overflow-x: auto;
         padding-bottom: 15px;
@@ -1254,6 +1257,9 @@ div.seller_button{
     margin: 10px 0;
     font-size: 14px;
     font-weight: normal;
+}
+p.faq_title {
+    font-weight: bold;
 }
 .below_price_content{
     display: block;
