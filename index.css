@@ -801,6 +801,7 @@ p.hamburger img {
         overflow-x: auto;
         padding-bottom: 15px;
     }
+    
     .mplaces{
         position: absolute;
         top: 0;
@@ -873,15 +874,31 @@ p.hamburger img {
 }
 .house_title_section{
     margin-bottom: 15px;
+      
 }
 .house_title{
     font-size: 25px;
     font-weight: bold;
+          
 }
 .house_star a{
     font-size: 12px;
     text-decoration: underline;
     color: #333;
+}
+.house_share:before{
+    content: '\e925';
+    font-family: 'housing_phoenix';
+    font-weight: bold;
+    color: #5e23dc;
+    font-size: 16.5px;
+}
+.house_like:before{
+    content: '\e92a';
+    font-family: 'housing_phoenix';
+    color: #e62878;
+    font-weight: bold;
+    font-size: 16.5px;
 }
 .builder{
     margin-bottom: 10px;
@@ -1201,6 +1218,7 @@ section.developer{
     display: flex;
     font-size: 12px;
     align-items: center;
+    justify-content:space-between;
 }
 .still_deciding div p{
     margin-bottom: 5px;
@@ -1271,6 +1289,9 @@ p.faq_title {
     .tabbedContent > div,.faq{
         display: block;
     }
+    .house_info{
+        margin-top: 12px;
+    }
     .breadcrumbs div,.house_info,.tabbedContent > div, .faq > div{
         width: 90vw;
     }
@@ -1279,6 +1300,25 @@ p.faq_title {
     }
     .houseFinance,.breadcrumbs{
         display: none;
+    }
+    .scrollspy .cards{
+        width: 100%;
+    }
+    .scrollspy .cards .card {
+        font-size: 12px;
+        margin: 5px 18px -3px 0;
+    }
+    .tabbedContent div.scrollspy{
+        padding: 5px 5vw 0;
+    }
+    .overview_Title,
+    .developer_title,
+    .below_price_title,
+    .about_Title,
+    .faq_title
+    {
+        font-size: 16px;
+        font-weight: normal;
     }
 }
 @media screen and (max-width:560px) {
@@ -1300,5 +1340,56 @@ p.faq_title {
     to {width: 60vw;}
   }
 
- 
+ .crumbs,
+ .last_update,
+ .house_title,
+ .house_star,
+ .builder,
+ .house_address,
+ .house_price,
+.house_emi,
+.house_moreInfo
+.houseFinance span,
+.scrollspy .card,
+.overview_Title,
+.info .text1,
+.info .text2,
+.ask_details,
+.about_Title,
+.about_content p,
+.about_button button,
+.below_price_title,
+.recently_added_cards .card_title,
+.recently_added_cards .main_title,
+.recently_added_cards .main_subTitle,
+.recently_added_cards .card_price,
+.recently_added_cards button,
+.developer_title,
+.dev_name,
+.year_est p,
+.projects p,
+.developer_content_disclaimer,
+.completeInfo,
+.ad_card,
+.contact_Seller .title,
+.contact_Seller .seller_name,
+.contact_Seller .seller_role,
+.contact_Seller .seller_number,
+.contact_Seller .form_title,
+.contact_Seller .form_title,
+.contact_Seller .contact_this_seller,
+.seller_disclaimer .disclaimer1,
+.seller_disclaimer .disclaimer2,
+.seller_disclaimer button,
+.seller_disclaimer .title,
+.faq p,
+.faq .div
+ {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+ }
+  
+    
+        
   
