@@ -2,10 +2,44 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
+    font-family: Rubik,Helvetica,sans-serif, Playfair;
 }
+@font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    src: url('//c.housingcdn.com/demand/s/client/common/assets/regular.6f75f467.woff2');
+  }
+  @font-face {
+    font-family: 'housing_phoenix';
+    font-display: swap;
+    src: local('housing_phoenix'), url('//c.housingcdn.com/demand/s/client/common/assets/style.c740e92c.woff2') format('woff2'), url('//c.housingcdn.com/demand/s/client/common/assets/style.626b9f7e.woff') format('woff'), url('//c.housingcdn.com/demand/s/client/common/assets/style.5fce2cdf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+    src: url('//c.housingcdn.com/demand/s/client/common/assets/regular.6f75f467.woff2');
+  }
+
+  /* @font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+    src: url('//c.housingcdn.com/demand/s/client/common/assets/medium.c9b650d9.woff2');
+  } */
 *:focus{
     outline: 0;
+}
+input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 .screenM{
     display: none;
@@ -13,10 +47,16 @@
 ul{
     list-style-type: none;
 }
-a{
+a,button{
     cursor: pointer;
 }
 /* header */
+.styleHead{
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25), transparent) rgb(94, 63, 224);
+    box-shadow: rgb(0 0 0 / 25%) 0px 4px 10px;
+}
 .header{
     max-width: 1500px;
     width: 90vw;
@@ -229,7 +269,8 @@ p.hamburger img {
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: 17px;
+    font-size: 14px;
+    padding: 0 10px 0 0;
     color: #5a5a64;
     font-weight: bold;
 }
@@ -267,6 +308,7 @@ p.hamburger img {
 .featured_project_subtitle,
 .news_project_subtitle
 {
+    font-size: 14.5px;
     margin: 10px 0 30px;
     color: #5a5a64;
 }
@@ -275,6 +317,8 @@ p.hamburger img {
 .news_project_cards
 {
     display: flex;
+    padding-bottom: 5px;
+
 }
 .recently_added_card,
 .featured_project_card,
@@ -307,6 +351,13 @@ p.hamburger img {
     font-weight: bold;
 }
 
+.recently_added_card button a,
+.featured_project_card button a,
+.news_project_card button a
+{
+    color: #fff;
+    text-decoration: none;
+}
 .recently_added_card button,
 .featured_project_card button,
 .news_project_card button
@@ -337,17 +388,22 @@ p.hamburger img {
 .featured_project_card {
     border: 1px solid #cfc4c4;
 }
+
+.featured_project_card:hover {
+    box-shadow: rgb(0 0 0 / 15%) 0px 6px 12px 4px;
+}
+
 .featured_project_card .card_details{
     margin-left: 20px;
     margin-top: 10px;
 }
 .featured_project_cards .card_title1{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16.5px;
     
 }
 .featured_project_cards .card_title2{
-    font-size: 13px;
+    font-size: 12.5px;
     margin-bottom: 10px;
 }
 /* news  */
@@ -376,18 +432,18 @@ p.hamburger img {
     justify-content: space-between;
 }
 .card_title{
-    font-size: 18px;
+    font-size:16.5px;
     margin: 7px 0;
 }
 .card_subTitle{
-    font-size: 15px;
+    font-size: 12.5px;
 }
 .main_subTitle{
     color: #5a5a64;
 }
 .card_price{
     margin: 15px 0;
-    font-size: 20px;
+    font-size: 16.5px;
     font-weight: bold;
 }
 
@@ -395,6 +451,10 @@ p.hamburger img {
 .footer{
     background: #000;
     color: #fff;
+}
+.footer     div p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto ;
+
 }
 .footer .footerwrap{
     max-width: 1500px;
@@ -414,7 +474,7 @@ p.hamburger img {
 }
 .toRentLocation div {
     flex: 0 1 14%;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
 }
 .toRentLocation div p {
     white-space: nowrap;
@@ -578,14 +638,36 @@ p.hamburger img {
     top: 0;
     z-index: 1000;
     background-color: #fff;
+    animation-name: openMenu;
+    animation-duration: 0.3s;
 }
 .quickLinks p {
     margin: 20px;
     word-break: keep-all;
 }
 @media screen and (max-width:1023px){
+    .footer{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    }
+    .footerSection > .Col{
+        border: 1px solid #7f7f7f;
+    }
+    .footerSection > .Col p:first-child{
+        background-color: #7f7f7f;
+        width: 100%;
+        padding: 10px;
+    }
+    .footerwrap > .Col p{
+        text-align: center;
+    width: 100%;
+    }
+    .content{
+        background-color: #fff;
+    }
     .search_panel{
+    background: url(//c.housingcdn.com/demand/s/client/common/assets/background.256dadc9.png) 50%/cover #4b37af;
         height: 400px;
+        border-radius:unset;
     }
     .header,.search_section_title,.d_view{
         display: none;
@@ -640,9 +722,15 @@ p.hamburger img {
         margin-bottom: 20px;
     }
     .Col p{
+        padding-left: 10px;
+        padding-right: 10px;
         margin-left: 0;
+        font-size: 14px;
+        color: #fff !important;
     }
-
+    .footer div p {
+        width: 100%;
+    }
     .screenL{
         display: none;
     }
@@ -677,11 +765,27 @@ p.hamburger img {
         flex-wrap: wrap;
     }
     .category_box{
+        text-align: center;
         margin: 2px;
         flex: 1 1 20%;
+    border-right: 1px solid #e1dbdb;
+    border-bottom: 1px solid #e1dbdb;
     }
+    .category_box:nth-child(4),.category_box:nth-child(8){
+        border-right: none;
+    }
+    .category_box:nth-child(5),
+        .category_box:nth-child(6),
+        .category_box:nth-child(7),
+        .category_box:nth-child(8){
+        border-bottom: none;
+
+        }
+
+    
     .category_image{
         font-size: 12px;
+        width: 90%;
     }
 
     .recently_added, .featured_project, .news_project{
@@ -728,11 +832,433 @@ p.hamburger img {
 }
 @media screen and (max-width:560px) {
     .recently_added_card, .featured_project_card, .news_project_card{
-        flex: 1 0 60vw;
+        flex: 1 0 60%;
     }
 }
 @media screen and (max-width:420px) {
     .recently_added_card, .featured_project_card, .news_project_card{
-        flex: 1 0 80vw;
+        flex: 1 0 80%;
     }
 }
+
+
+/* report page  */
+
+.breadcrumbs{
+    padding-top: 130px;
+}
+
+.breadcrumbs div{
+    padding: 0 0 10px;
+    width: 70vw;
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #333;
+}
+.house_info{
+    width: 70vw;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.house_info > div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.house_title_section{
+    margin-bottom: 15px;
+}
+.house_title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.house_star a{
+    font-size: 12px;
+    text-decoration: underline;
+    color: #333;
+}
+.builder{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.builder a{
+     color: #5e23dc;;
+}
+.house_address{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+.houseFinance{
+    text-align: end;
+}
+.houseFinance > p{
+    margin-bottom: 5px;
+}
+.house_price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price_square,.house_moreInfo{
+    color: #333;
+}
+.house_emi{
+    color: #5e23dc;
+}
+.house_moreInfo{
+
+}
+.houseFinance button{
+    background-color: #5e23dc;
+    padding: 12px 15px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.scrollspy ul{
+    display: flex;
+    overflow-x: scroll;
+}
+.scrollspy ul li{
+    margin: 5px 70px 3px 0;
+    white-space:nowrap;
+}
+.tabbedContent{
+    background-color:#f4f4f4;
+    padding: 10px 0;
+}
+.tabbedContent > div,.faq > div{
+    padding: 0 0 10px;
+    width: 70vw;
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.overview_Title,.about_Title,.below_price_title,.developer_title{
+    font-size: 18.5px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+.carousel_content{
+    margin-right: 10px;
+    flex : 1 1 50%;
+    background-color: #f4f4f4;
+}
+section.overview,section.about, section.below_price,section.developer {
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.overview_content,.about_content,.below_price_content,.developer_content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    padding: 15px 16px;
+}
+
+
+.overview_cell{
+    display: flex;
+    align-items: center;
+    flex: 1 0 33%;
+    margin: 15px 0;
+}
+.overview_cell .icon{
+    margin-right: 5px;
+}
+.overview_cell .text1{
+    color: #999;
+    font-size: 14.5px;
+}
+.overview_buttons,.about_button{
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 10px;
+    justify-content: space-between;
+}
+.overview_buttons button,.about_button button{
+    margin: 0 5px;
+    padding: 12px 0;
+    flex: 1 1 30%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: none;
+    font-weight: bold;
+}
+.share,.save{
+    background-color: #e1def4;
+    color:#03016f
+}
+.ask_details{
+    background-color:#5e23dc;
+    color: #fff;
+}
+
+.about_content{
+    color:rgb(76, 76, 76);
+    line-height: 24px;
+
+}
+.halfed{
+    height: 75px;
+    overflow: hidden;
+}
+.about_button button{
+    color: rgb(94, 35, 220);
+    background-color: unset;
+}
+.about_button_less button:after ,.about_button_more button:after{
+    content: '\e908';
+    font-family: 'housing_phoenix';
+    display: inline-block;
+    font-size: 10.5px;
+    transform: rotate(90deg);
+}
+.about_button_more button:after {
+    transform: rotate(-90deg);
+
+}
+.below_price .recently_added_card{
+    flex: 1 0 31%;
+}
+.below_price .recently_added_card img{
+    border-radius: unset;
+}
+
+.below_price .card_details{
+    padding: 0 5px;
+}
+.below_price .right_arrow ,.below_price .left_arrow{
+    border-radius: unset;
+    opacity: 0.8;
+}
+section.developer{
+    padding-bottom: 15px;
+}
+.developer_content {
+    border:1px solid #eee;
+    padding: 15px;
+    margin: 20px 40px 0;
+}
+.developer_content > div{
+    display: flex;
+    width: 100%;
+}
+.developer_img{
+    width: 50px;
+    border-radius: 50%;
+    margin: 15px 0;
+}
+.developer_stat{
+    margin: 15px;
+}
+.dev_name{
+    margin-bottom: 30px;
+}
+.developer_stat > div{
+    display: flex;
+}
+.year_est,.projects{
+    margin-right: 20px;
+}
+.year_est p:nth-child(2),.projects p:nth-child(2){
+    color: #999;
+}
+.year_est p:nth-child(1),.projects p:nth-child(1){
+    font-weight: bold;
+}
+.projects p:nth-child(2) span{
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    padding: 2px 8px;
+}
+.developer_content_disclaimer{
+    color: #999;
+    font-size: 14px;
+}
+
+.contact_Seller{
+    position: sticky;
+    flex: 1 1 27%;
+    height: max-content;
+    top: 0;
+}
+.contact_Seller > div{
+    background-color: #fff;
+    padding: 15px;
+
+}
+.ad_card{
+    font-size: 12.5px;
+    padding: 10px;
+    background-color: #fffceb;
+    border: 1px solid #ffe01f;
+}
+.contact_form .title{
+    font-size: 16.5px;
+    margin-bottom: 8px;
+}
+.contact_Seller .contact_form{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    box-shadow: 0 0 26px 0 rgb(0 0 0 / 12%);
+}
+
+.seller_img img{
+    width: 30px ;
+    height: 30px ;
+    background-color: #1bd58e;
+    border-radius: 50%;
+}
+.card_top{
+    font-size: 12px;
+    margin-bottom: 20px; 
+    display: flex;
+}
+.seller_details{
+    margin-left: 10px;
+}
+.form_title{
+    font-size: 11px;
+    font-weight: bold;
+}
+.contact_this_seller input{
+    width: 100%;
+    margin: 10px 20px 10px 0;
+}
+.seller_disclaimer, .seller_disclaimer input,.seller_disclaimer label{
+    font-size: 12px;
+    margin: 10px 0;
+}
+.contact_button button{
+    width: 100%;
+    padding: 12px;
+    background: #7f7f7f;
+    border: none;
+    color: #fff;
+}
+.still_deciding{
+    width: 100%;
+    height: 82px;
+    background: url(//c.housingcdn.com/demand/s/client/common/assets/stillPending.8687c94d.svg);
+    background-color: #ffffff;
+    background-position-x: right;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+.still_deciding div p{
+    margin-bottom: 5px;
+}
+
+.still_deciding div p:first-child{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.still_deciding img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+div.seller_button{
+    margin-top: 15px;
+    display: flex;
+    padding: 0;
+}
+.seller_button button{
+    flex: 1 1 50%;
+    padding: 10px ;
+    border: 0;
+    background-color: #fff;
+    color: #7f7f7f;
+}
+.seller_button button:first-child{
+    border-right: 1px solid #eaeaea ;
+}
+.faq{
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+}
+.faq> div{
+    display: block;
+    background-color: #fff;
+    padding: 15px;
+}
+.faq_block > div{
+    display: flex;
+    justify-content: space-between;
+}
+.remove{
+    display: none;
+}
+.answer{
+    margin-top: 10px;
+    color: #7f7f7f;
+}
+.faq_block{
+    padding: 10px;
+    border: 1px solid #eaeaea ;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+.below_price_content{
+    display: block;
+}
+.seeMore,.seeLess{
+    color: rgb(94, 35, 220);
+}
+@media screen and (max-width:1023px) {
+    .tabbedContent > div,.faq{
+        display: block;
+    }
+    .breadcrumbs div,.house_info,.tabbedContent > div, .faq > div{
+        width: 90vw;
+    }
+    .overview_cell{
+        flex: 1 1 50%;
+    }
+    .houseFinance,.breadcrumbs{
+        display: none;
+    }
+}
+@media screen and (max-width:560px) {
+    .below_price  .recently_added_card{
+        flex: 1 0 60%;
+    }
+}
+@media screen and (max-width:420px) {
+    .below_price .recently_added_card{
+        flex: 1 0 80%;
+    }
+}
+.mlocation{
+    display: none;
+}
+
+@keyframes openMenu {
+    from {width: 0vw;}
+    to {width: 60vw;}
+  }
+
+ 
+  

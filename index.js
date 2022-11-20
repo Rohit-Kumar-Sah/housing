@@ -1,4 +1,13 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+  //header
+  window.addEventListener("scroll", (e) => {
+    if (window.scrollY >= 470) {
+      document.querySelector(".header").classList.add("styleHead");
+    } else {
+      document.querySelector(".header").classList.remove("styleHead");
+    }
+  });
+
   //location selected information
   document.querySelector("#userCity")?.addEventListener("change", (e) => {
     let location = document.querySelector("#userCity").value;
@@ -122,5 +131,51 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.querySelector(".quickNavOverlay").style.display = "none";
     document.querySelector(".quickNavContent").style.display = "none";
     document.body.style.overflow = "unset";
+  });
+
+  // faq
+
+  document.querySelectorAll(".faq_block")?.forEach((ele) => {
+    ele.addEventListener("click", (event) => {
+      console.log(event.target);
+      event.target
+        .closest(".faq_block")
+        .querySelector(".plus")
+        .classList.toggle("remove");
+      event.target
+        .closest(".faq_block")
+        .querySelector(".minus")
+        .classList.toggle("remove");
+      event.target
+        .closest(".faq_block")
+        .querySelector(".answer")
+        .classList.toggle("remove");
+    });
+  });
+
+  // see more/less
+
+  [
+    document.querySelector(".seeMore"),
+    document.querySelector(".seeLess"),
+  ].forEach((ele) => {
+    ele?.addEventListener("click", (event) => {
+      document.querySelector(".seeMore").classList.toggle("remove");
+      document.querySelector(".seeLess").classList.toggle("remove");
+      document.querySelector(".completeInfo").classList.toggle("remove");
+    });
+  });
+
+  //show more/less
+
+  [
+    document.querySelector(".about_button_more"),
+    document.querySelector(".about_button_less"),
+  ].forEach((ele) => {
+    ele?.addEventListener("click", (event) => {
+      document.querySelector(".about_button_more").classList.toggle("remove");
+      document.querySelector(".about_button_less").classList.toggle("remove");
+      document.querySelector(".about_content p").classList.toggle("halfed");
+    });
   });
 });
