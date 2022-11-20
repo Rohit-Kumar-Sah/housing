@@ -2,9 +2,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   //header
   window.addEventListener("scroll", (e) => {
     if (window.scrollY >= 470) {
-      document.querySelector(".header").classList.add("styleHead");
+      document.querySelector(".header")?.classList.add("styleHead");
     } else {
-      document.querySelector(".header").classList.remove("styleHead");
+      document.querySelector(".header")?.classList.remove("styleHead");
     }
   });
 

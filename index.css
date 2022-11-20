@@ -939,6 +939,10 @@ p.hamburger img {
     height: 42px;
     width: 70vw;
 }
+.scrollspy .cards .active{
+    border-bottom: solid 4px #5e23dc;
+    color: #5e23dc;
+}
 .scrollspy .cards .card{
     margin: 5px 70px 3px 0;
     white-space:nowrap;
