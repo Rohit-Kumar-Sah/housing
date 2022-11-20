@@ -845,7 +845,7 @@ p.hamburger img {
 /* report page  */
 
 .breadcrumbs{
-    padding-top: 130px;
+    padding-top: 10px;
 }
 
 .breadcrumbs div{
@@ -922,17 +922,47 @@ p.hamburger img {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
-.scrollspy ul{
-    display: flex;
-    overflow-x: scroll;
+.tabbedContent div.scrollspy{
+    z-index: 3;
+    border-top: 1px solid #e9e9e9;
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 12%);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background-color: #fff;
+    max-width: 100%;
+    padding: 5px 15vw 0;
+    margin-bottom: 20px;
 }
-.scrollspy ul li{
+.scrollspy .cards{
+    display: flex;
+    height: 42px;
+    width: 70vw;
+}
+.scrollspy .cards .card{
     margin: 5px 70px 3px 0;
     white-space:nowrap;
 }
+.scrollspy .right_arrow,.scrollspy .left_arrow{
+    border-radius: unset;
+    opacity: 0.9;
+    height: 42px;
+    top: 42%;
+    height: 50px;
+    box-shadow: unset;
+}
+.scrollspy .right_arrow {
+    border-left: 1px solid rgb(0 0 0 / 12%);
+    transform: translate(0%,-50%);
+}
+.scrollspy .left_arrow {
+    border-right:  1px solid rgb(0 0 0 / 12%);
+
+    transform: translate(-14%,-50%);
+}
 .tabbedContent{
     background-color:#f4f4f4;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
 }
 .tabbedContent > div,.faq > div{
     padding: 0 0 10px;
@@ -1096,7 +1126,7 @@ section.developer{
     position: sticky;
     flex: 1 1 27%;
     height: max-content;
-    top: 0;
+    top: 45px;
 }
 .contact_Seller > div{
     background-color: #fff;
