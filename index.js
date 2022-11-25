@@ -178,4 +178,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.querySelector(".about_content p").classList.toggle("halfed");
     });
   });
+
+  //quickmenu accordion
+  document.querySelectorAll(".qmenu_title")?.forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+      console.log("click", e.target);
+      e.target
+        .closest(".qsection")
+        .querySelector(".qmenu_title")
+        .classList.toggle("active");
+      e.target
+        .closest(".qsection")
+        .querySelector(".qmenu_info")
+        .classList.toggle("active");
+    });
+  });
 });

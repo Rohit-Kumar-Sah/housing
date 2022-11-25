@@ -19,6 +19,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'details_phoenix';
+    font-display: swap;
+    src: local('details_phoenix'), url('//c.housingcdn.com/demand/s/client/common/assets/style.85151818.woff2') format('woff2'), url('//c.housingcdn.com/demand/s/client/common/assets/style.f13dd1eb.woff') format('woff'), url('//c.housingcdn.com/demand/s/client/common/assets/style.99ad733d.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Rubik';
     font-display: swap;
     font-weight: 400;
@@ -41,9 +48,10 @@ input{
     border-right: none;
     border-left: none;
 }
-.screenM{
-    display: none;
+.screenM,.screenMFlex{
+    display: none ;
 }
+
 ul{
     list-style-type: none;
 }
@@ -94,9 +102,9 @@ a,button{
 }
 .hamburger {
     position: absolute;
-    right: 45px;
-    top: 13%;
-    transform: translate(-50%,-46%);
+    right: 0px;
+    top: 0px;
+    transform: translate(-50%,50%);
 }
 p.hamburger img {
     height: 30px;
@@ -107,10 +115,10 @@ p.hamburger img {
     display: none;
 }
 .screenL{
-    display: inline-block;
+    display: inline-block ;
 }
 .screenLBlock{
-    display: block;
+    display: block ;
 }
 .search_panel{
     max-width: 1500px;
@@ -278,8 +286,9 @@ p.hamburger img {
     font-weight: bold;
 }
 .category_image img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px;
     border-radius: 50%;
 }
 
@@ -451,6 +460,7 @@ p.hamburger img {
 }
 
 /* footer */
+
 .footer{
     background: #000;
     color: #fff;
@@ -474,6 +484,8 @@ p.hamburger img {
     justify-content: space-between;
     margin: 0 auto;
     overflow-x: auto;
+    display: none;
+
 }
 .toRentLocation div {
     flex: 0 1 14%;
@@ -634,8 +646,8 @@ p.hamburger img {
 }
 .quickNavContent {
     display: none;
-    width: 60vw;
-    height: 100vh;
+    width: 85vw;
+    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
@@ -643,10 +655,298 @@ p.hamburger img {
     background-color: #fff;
     animation-name: openMenu;
     animation-duration: 0.3s;
+    overflow-y: scroll;
 }
-.quickLinks p {
+.profile{
+    height: 120px;
+    display: flex;
+    padding: 18px;
+    align-items: center;
+    background-color: rgb(242, 243, 248);
+}
+.userImg img{
+    height: 50px;
+}
+.loginbtn {
+    margin-left: auto;
+}
+.userInfo{
+    padding: 0 5px 0 15px;
+}
+.userInfo p::before{
+    content: "";
+    font-family: housing_phoenix;
+    color: rgb(85, 214, 167);
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 4px;
+}
+.userInfo p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 2px;
+}
+.loginbtn button{
+    cursor: pointer;
+    color: #fff;
+    background-color: #1bd58e;
+    border: none;
+    padding: 10px 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.seperator{
+    
+    height: 1px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.01));
+}
+.qmenu {
     margin: 20px;
     word-break: keep-all;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(51, 51, 51);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 400;
+}
+.transactions::before{ 
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.qmenu_title,.qmenu_title_diff{
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(51, 51, 51);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 500;
+}
+.qmenu_title.active::after{
+    content: "";
+    font-family: housing_phoenix;
+    transform: rotate(90deg);
+    color: rgb(184, 184, 184);
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease 0s;
+}
+.qsection{
+    padding: 20px;
+}
+.qmenu_title::after{
+    content: "";
+    font-family: housing_phoenix;
+    transform: rotate(270deg);
+    color: rgb(184, 184, 184);
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease 0s;
+}
+.qmenu_title.active span{
+    font-weight: bold;
+}
+.quick_link::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+
+.qmenu_info{
+    display: none;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.qmenu_info.active{
+    display: flex;
+}
+.qcard{
+    width: 76px;
+    height: 72px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+}
+.qcard.home::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+.qcard.owner_package::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+.qcard.post_properties::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+.qcard.news::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+.qcard.research::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+
+.qcard.fraud::before{
+    
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    color: rgb(78, 78, 78);
+}
+.qcard p{
+    overflow: hidden;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 14px;
+}
+.qmenu_title.housing_edge::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.qmenu_title.services::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.qmenu_title.top_search::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.qmenu_title_diff.unsubscribe_alerts::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.qmenu_title.housing_Advice::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.visit_center,.preferred_language{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 15px 20px;
+    padding: 15px;
+    font-size: 14px;
+    color: rgb(94, 35, 220);
+    height: 48px;
+    border: 1px solid rgba(151, 151, 151, 0.3);
+}
+.visit_center::before {
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.visit_center::after {
+    content: "";
+    font-family: housing_phoenix;
+    transform: rotate(180deg);
+    margin-left: auto;
+    font-size: 12px;
+    color: rgb(78, 78, 78);
+}
+.preferred_language span{
+    margin-left: auto;
+    color: rgb(51, 51, 51);
+}
+.preferred_language::before {
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 24px;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+}
+.followOn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(51, 51, 51);
+    opacity: 0.6;
+    margin: 15px 20px;
+}
+.facebook::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 16px;
+}
+.instagram::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 16px;
+}
+.linkedin::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 16px;
+}
+.twitter::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 16px;
+}
+.youtube::before{
+    content: "";
+    font-family: housing_phoenix;
+    font-size: 16px;
+}
+.followicons{
+    display: flex;
+    justify-content: flex-end;
+}
+.followicons a{
+    text-decoration: none;
+    margin-left: 15px;
 }
 @media screen and (max-width:1023px){
     .footer{
@@ -735,13 +1035,16 @@ p.hamburger img {
         width: 100%;
     }
     .screenL,.screenLBlock{
-        display: none;
+        display: none ;
     }
     .search_container form{
         width: 85vw;
     }
     .screenM{
-        display: inline-block;
+        display: inline-block ;
+    }
+    .screenMFlex{
+        display: flex;
     }
     /* header  */
     .header,.search_panel{
@@ -768,11 +1071,18 @@ p.hamburger img {
         flex-wrap: wrap;
     }
     .category_box{
+        height: 100px;
         text-align: center;
-        margin: 2px;
-        flex: 1 1 20%;
+        margin: 0px;
+        flex: 1 1 21%;
     border-right: 1px solid #e1dbdb;
     border-bottom: 1px solid #e1dbdb;
+    border-radius: unset;
+    }
+    .category_image img{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 15px;
     }
     .category_box:nth-child(4),.category_box:nth-child(8){
         border-right: none;
@@ -811,6 +1121,18 @@ p.hamburger img {
         width: 100vw;
         
     }
+    .mfoot{
+        display: flex;
+        width: 100%;
+    }
+    .mfoot p{
+        flex: 1 1 40%;
+    }
+    .mfoot .icons{
+        display: flex;
+        justify-content: space-between;
+        flex: 1 1 60%;
+    }   
 }
 @media screen and (max-width:768px) {
     .header_right{
@@ -943,7 +1265,7 @@ p.hamburger img {
     border-top-right-radius: 7px;
 }
 .tabbedContent div.scrollspy{
-    z-index: 3;
+    z-index: 103;
     border-top: 1px solid #e9e9e9;
     box-shadow: 0 4px 6px 0 rgb(0 0 0 / 12%);
     position: sticky;
@@ -1041,6 +1363,8 @@ section.overview,section.about, section.below_price,section.developer {
     margin: 0 10px;
     padding: 15px 10px;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
 }
 .overview_buttons button,.about_button button{
     margin: 0 5px;
@@ -1055,13 +1379,28 @@ section.overview,section.about, section.below_price,section.developer {
 }
 .share,.save{
     background-color: #e1def4;
-    color:#03016f
+    color:#5D46D5;
 }
 .ask_details{
     background-color:#5e23dc;
     color: #fff;
 }
-
+.share::before{
+    vertical-align: middle;
+    content: '\e90d';
+    font-family: 'details_phoenix';
+    color: #5e23dc;
+    margin-right: 8px;
+    font-size: 19px;
+}
+.save:before{
+    content: '\e92a';
+    vertical-align: middle;
+    font-family: 'housing_phoenix';
+    color: #5e23dc;
+    margin-right: 8px;
+    font-size: 19px;
+}
 .about_content{
     color:rgb(76, 76, 76);
     line-height: 24px;
@@ -1135,11 +1474,9 @@ section.developer{
 .year_est p:nth-child(1),.projects p:nth-child(1){
     font-weight: bold;
 }
-.projects p:nth-child(2) span{
-    background-color: #000;
-    border-radius: 50%;
-    color: #fff;
-    padding: 2px 8px;
+.projects p:nth-child(2) span img{
+    width: 20px;
+    height: 20px;
 }
 .developer_content_disclaimer{
     color: #999;
@@ -1176,9 +1513,12 @@ section.developer{
     box-shadow: 0 0 26px 0 rgb(0 0 0 / 12%);
 }
 
-.seller_img img{
-    width: 30px ;
-    height: 30px ;
+.seller_img {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
     background-color: #1bd58e;
     border-radius: 50%;
 }
@@ -1195,15 +1535,31 @@ section.developer{
     font-weight: bold;
 }
 .contact_this_seller input{
+    padding: 9px 0 0;
     width: 100%;
     margin: 10px 20px 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    color : rgba(0,0,0,.7);
+    font-size: 16.5px;
 }
 .seller_disclaimer, .seller_disclaimer input,.seller_disclaimer label{
     font-size: 12px;
     margin: 10px 0;
 }
+.contact_button{
+    display: flex;
+}
 .contact_button button{
-    width: 100%;
+    flex: 1 1 100%;
+    margin: 0 5px;
+}
+.contact_button .callback{
+    background-color: #fff;
+    border: 1px solid #5e23dc;
+    color: #5e23dc;
+    padding: 0 8px;
+}
+.contact_button .contact{
     padding: 12px;
     background: #7f7f7f;
     border: none;
@@ -1270,7 +1626,8 @@ div.seller_button{
     color: #7f7f7f;
 }
 .faq_block{
-    padding: 10px;
+    padding: 20px;
+    cursor: pointer;
     border: 1px solid #eaeaea ;
     margin: 10px 0;
     font-size: 14px;
@@ -1285,7 +1642,26 @@ p.faq_title {
 .seeMore,.seeLess{
     color: rgb(94, 35, 220);
 }
+.overview_cell::before {
+    content: "";
+    font-family: details_phoenix;
+    float: left;
+    margin: 10px 6px 0px 0px;
+    font-size: 24px;
+}
+.about_content p{
+    text-align: justify;
+}
 @media screen and (max-width:1023px) {
+    .carousel_content{
+        margin-right: 0;
+    }
+    .developer_content{
+        margin: 20px 12px 0;
+    }
+    section.about{
+        background-color: rgb(242, 243, 248);
+    }
     .tabbedContent > div,.faq{
         display: block;
     }
@@ -1293,7 +1669,7 @@ p.faq_title {
         margin-top: 12px;
     }
     .breadcrumbs div,.house_info,.tabbedContent > div, .faq > div{
-        width: 90vw;
+        width: 100vw;
     }
     .overview_cell{
         flex: 1 1 50%;
@@ -1320,6 +1696,9 @@ p.faq_title {
         font-size: 16px;
         font-weight: normal;
     }
+    .still_deciding{
+        background-repeat: no-repeat;
+    }
 }
 @media screen and (max-width:560px) {
     .below_price  .recently_added_card{
@@ -1337,7 +1716,7 @@ p.faq_title {
 
 @keyframes openMenu {
     from {width: 0vw;}
-    to {width: 60vw;}
+    to {width: 85vw;}
   }
 
  .crumbs,
@@ -1389,7 +1768,82 @@ p.faq_title {
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
  }
+ .info .text2{
+    font-family: Rubik,Helvetica,sans-serif, Playfair;
+    font-size: 14.5px;
+ }
+ .overview_buttons button{
+    font-family: Rubik,Helvetica,sans-serif, Playfair;
+    font-size: 16.5px;
+ }
   
-    
+.seller_number{
+    font-weight: 500;
+}
         
+.fname,.fnumber,.femail {
+    position: relative;
+
+}
   
+
+#name:valid ~ p,
+#number:valid ~ p,
+#email:valid ~ p
+{
+    display: none;
+}
+.fname p,
+.fnumber p,
+.femail p{
+    font-size: 12.5px;
+    color: rgba(0,0,0,.38);
+    position: absolute;
+    bottom: 11%;
+    transform: translateY(-50%);
+    animation-name: formlabeldefault;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    }
+.fname #name:focus ~ p,
+.fnumber #number:focus ~ p,
+.femail #email:focus ~ p
+{
+    display: block;
+    color: rgb(94, 35, 220);
+    transform: translateY(-100%);
+    font-size: 10px;
+    top:50%;
+    animation-name: formlabel;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+
+}
+#codes{
+    z-index: 3;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 4px;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+}
+#number,.fnumber p{
+    padding-left: 53px;
+}
+.fnumber #number:focus ~ p{
+    padding-left: 0;
+}
+
+@keyframes formlabel {
+    from {transform: translateY(-50%);}
+    to {transform: translateY(-100%);}
+  }
+  @keyframes formlabeldefault {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(-50%);}
+  }  
+
+
