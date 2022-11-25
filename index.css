@@ -462,7 +462,7 @@ p.hamburger img {
 /* footer */
 
 .footer{
-    background: #000;
+    background: #37475a;
     color: #fff;
 }
 .footer     div p{
@@ -1902,4 +1902,212 @@ p.faq_title {
     to {transform: translateY(-50%);}
   }  
 
+footer{
+    background-color: #37475a;
+    padding: 20px 0;
 
+}
+.footer, .help a{
+    margin: 0 auto;
+    width: 70%;
+    color: #fff;
+}
+.footer >div{
+    display: flex;
+    padding: 20px 0;
+}
+.footer .help{
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 0 0;
+}
+.help a{
+    text-decoration: none;
+}
+.help a:hover{
+    text-decoration: underline;
+}
+.footer .followUS{
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20%;
+    align-items: center;
+
+}
+
+.help .links, .followUS .links {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+}
+.followUS .links{
+    border-left: 1px solid #fff;
+    justify-content: space-evenly;
+}
+hr{
+    border-bottom: 1px solid #fff;
+
+}
+.social span{
+    margin: 0px 20px;
+}
+.companyData{
+    justify-content: space-between;
+}
+.companyData div{
+    flex:  0 1 29%;
+}
+.companyData .title{
+    margin: 15px 0;
+    font-weight: 500;
+}
+.reach p:not(.title){
+    margin: 0 0 8px 0;
+}
+.footerendribbon {
+    background-color: #4e5763;
+}
+.footerendribbon .content{
+    color: #fff;
+    background-color: #4e5763;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.paypal{
+    height: 22px;
+    width: 100px;
+}
+.payment .img{
+    background-color: #fff;
+    padding: 2px 10px 5px 10px;
+
+
+}
+.mobseperator{
+    border: 1px solid #fff;
+    margin: 25px 0;
+}
+.payment{
+    display: flex;
+    border: 1px solid #fff;
+    align-items: center;
+}
+.payment .title{
+    padding: 2px 10px 5px 10px;
+    font-size: 13px;
+
+}
+
+.social .twitter{
+    background-position: -1px 0px;
+    background-image: url(https://www.transparencymarketresearch.com/assets/images/Socialicon.svg);
+    width: 40px;
+    height: 40px;
+}
+.social .linkedin{
+    background-position: 95px 0px;
+    background-image: url(https://www.transparencymarketresearch.com/assets/images/Socialicon.svg);
+    width: 40px;
+    height: 40px;
+}
+.social .youtube{
+    background-position: 40px 0px;
+    background-image: url(https://www.transparencymarketresearch.com/assets/images/Socialicon.svg);
+    width: 40px;
+    height: 40px;
+}
+.mobseperator,
+.footerendribbon .followOn,
+.footerStartMobile{
+    display: none;
+}
+.help.screenLFlex,
+hr.screenLBlock{
+    display: flex;
+}
+@media screen and (max-width:1024px) {
+    .footerStartMobile .links{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footerStartMobile .links a{
+        margin: 15px ;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .footerStartMobile .links a:hover{
+        text-decoration: underline;
+    }
+
+    .mob{
+        display: flex ;
+    }
+    .footer .followUS,
+    .helpTitle,
+    .headquarter,
+    .payment,
+    .help.screenLFlex,
+    hr.screenLBlock{
+        display: none;
+    }
+    .help a{
+        width: max-content;
+        margin: 5px;
+    }
+    .help .links{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    } 
+    footer{
+        padding: 0;
+    }
+    .footer{
+        width: 95%;
+    }
+    .footer >div{
+        padding: 0;
+    }
+    .footer p,
+    .footer a{
+        font-size: 15px;
+    }
+    footer .companyData,
+    .mobseperator,.footerStartMobile{
+        display: block;
+    }
+    .footer .companyData{
+        padding-bottom: 25px;
+    }
+    .footerendribbon,
+    .footerendribbon .content{
+        background-color: #fff;
+        color: #000;
+    }
+    .footerendribbon .content{
+        margin-left: 0;
+        padding-left: 10px;
+        font-size: 12px;
+        width: 100%;
+        position: relative;
+    }
+    .footerendribbon .followOn{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left:45%;
+        transform: translate(-50%,-100%);
+        background-color: #fff;
+        width: 80%;
+        padding: 10px;
+        opacity: 1;
+    }
+}
