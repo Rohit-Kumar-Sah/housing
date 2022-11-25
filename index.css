@@ -1642,11 +1642,53 @@ p.faq_title {
 .seeMore,.seeLess{
     color: rgb(94, 35, 220);
 }
-.overview_cell::before {
+.projectArea::before {
     content: "";
     font-family: details_phoenix;
     float: left;
-    margin: 10px 6px 0px 0px;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.sizes::before {
+    content: '\e905';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.project_size::before {
+    content: '\e906';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.avgPrice::before {
+    content: '\e909';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.possession::before {
+    content: '\e922';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.config::before {
+    content: '\e92d';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
+    font-size: 24px;
+}
+.rera::before {
+    content: '\e90c';
+    font-family: details_phoenix;
+    float: left;
+    margin: 0px 6px 0px 0px;
     font-size: 24px;
 }
 .about_content p{
@@ -1665,11 +1707,12 @@ p.faq_title {
     .tabbedContent > div,.faq{
         display: block;
     }
-    .house_info{
-        margin-top: 12px;
-    }
-    .breadcrumbs div,.house_info,.tabbedContent > div, .faq > div{
+    .breadcrumbs div,.tabbedContent > div, .faq > div{
         width: 100vw;
+    }
+    .house_info{
+        width: 95vw;
+        margin-top: 12px;
     }
     .overview_cell{
         flex: 1 1 50%;
@@ -1698,6 +1741,19 @@ p.faq_title {
     }
     .still_deciding{
         background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:768px) {
+    .overview_buttons{
+        flex-wrap: wrap;
+    }
+    .overview_buttons .ask_details{
+        margin: 7px;
+        order: 1;
+        flex: 1 1 100%;
+    }
+    .overview_buttons .share,.overview_buttons .save{
+        order: 2;
     }
 }
 @media screen and (max-width:560px) {
