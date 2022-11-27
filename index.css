@@ -1281,6 +1281,10 @@ p.hamburger img {
     height: 42px;
     width: 70vw;
 }
+.scrollspy .cards a{
+    text-decoration: none;
+    color: unset;
+}
 .scrollspy .cards .active{
     border-bottom: solid 4px #5e23dc;
     color: #5e23dc;
@@ -1575,6 +1579,7 @@ section.developer{
     font-size: 12px;
     align-items: center;
     justify-content:space-between;
+    background-repeat: no-repeat;
 }
 .still_deciding div p{
     margin-bottom: 5px;
@@ -2036,6 +2041,7 @@ hr.screenLBlock{
 .mailme{
     white-space: nowrap;
 }
+
 @media screen and (max-width:1024px) {
     .footerStartMobile .links{
         display: flex;
