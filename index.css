@@ -2120,3 +2120,272 @@ hr.screenLBlock{
         opacity: 1;
     }
 }
+ /* report header  */
+
+ .report header{
+    z-index: 200;
+ }
+.head1{
+    background-color: rgb(94, 35, 220);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.head1 .logo{
+    height: 100%;
+    padding: 10px 0px;
+    width: 173px;
+}
+.head1 .logo img{
+    object-fit: cover;
+    height: 18px;
+    margin: 0px 16px;
+}
+
+.head1 .searchbar,.textSearchBar{
+    align-items: center;
+    padding: 0 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    height: 34px;
+    display: flex;
+    width: 40vw;
+    margin-left: 3rem;
+}
+.textSearchBar{
+    width: 40vw;
+    border: none;
+    margin-left: 3rem;
+    display: flex;
+    position: relative;
+}
+.textSearchBar input{
+    border: none;
+}
+.openSearchBar{
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(102%);
+    background-color: #fff;
+    border-radius: 2px;
+    width: 40vw;
+    overflow: auto;
+    z-index: 200;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 10px 0px;
+}
+.glass::before{
+    content: '\e90a';
+    font-family: 'housing_phoenix';
+    display: inline-block;
+    width: 18px;
+    color: rgb(94, 35, 220);
+}
+.pill{
+    font-size: 12.5px;
+    border-radius: 13px;
+    line-height: 25px;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #5e23dc;
+    cursor: pointer;
+    pointer-events: none;
+}
+.pillText{
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+.pillClose::before{
+    content: '\e909';
+    font-family: 'housing_phoenix';
+    font-size: 8.5px;
+}
+.pillAdd{
+    font-size: 12.5px;
+    border-radius: 13px;
+    line-height: 25px;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0 10px;
+    color: #5e23dc;
+    border: solid 1px #5e23dc;
+    cursor: pointer;
+    pointer-events: none;
+}
+.topNavs{
+    margin-left: auto;
+    font-size: 12.5px;
+    display: flex   ;
+}
+.dApps,.saved{
+    height: 44px;
+    padding: 0 15px;
+    border-left: 1px solid #0003;
+    line-height: 44px;
+    color: #fff;
+    cursor: pointer;
+}
+.dApps::before{
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    font-size: 15.5px;
+    content: '\e97b';
+    font-family: 'housing_phoenix';
+}
+.saved::before{
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    font-size: 15px;
+    content: '\e916';
+    font-family: 'housing_phoenix';
+}
+.listProp{
+    margin: 7px 10px 7px 10px;
+    padding: 6px;
+    width: 132px;
+    line-height: 18px;
+    color: #5e23dc;
+    background-color: #fff;
+    text-transform: capitalize;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+.listProp span{
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 6px;
+    font-size: 10.5px;
+    line-height: 18px;
+    color: #fff;
+    background-color: #f22b68;
+}
+.pillSpace{
+    padding: 5px 10px 10px;
+}
+.pillSpace .pill{
+    margin: 10px 2px 0px;
+}
+.popular .title,.featuredPro .title,.featuredDev .title{
+    line-height: 34px;
+    color: rgb(127, 127, 127);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    padding: 7px 0px 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-size: 12.5px;
+    pointer-events: none;
+    padding: 0px 10px;
+
+}
+.popular .title::after,.featuredPro .title::after,.featuredDev .title::after
+
+     {
+        content: "";
+        position: absolute;
+        top: 24px;
+        width: 100%;
+        margin-left: 20px;
+        border-top: 1px solid rgb(230, 230, 230);
+        transform: translateY(-50%);
+    }
+
+.popular .place:hover,.featuredPro .place:hover,.featuredDev .place:hover{
+    background-color: rgb(94, 35, 220);
+    color: #fff;
+}
+.popular .place,.featuredPro .place,.featuredDev .place{
+    padding: 0px 10px;
+    font-size: 14px;
+    line-height: 34px;
+    color: rgb(127, 127, 127);
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.hideSearch{
+    display: none !important;
+}
+
+.head2{
+    background-color: #fff;
+    display: flex;
+}
+.head2 .dropdown{
+    font-size: 12.5px;
+    color: #6c6c6c;
+    border-radius: 2px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    margin: 8px 6px;
+    position: relative;
+    width: max-content;
+}
+.head2 .dropdownTitle{
+    padding: 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #6c6c6c;
+}
+.head2 .dropdownTitle .close::after{
+    content: '\e908';
+    font-family: 'housing_phoenix';
+    display: inline-block;
+    font-size: 10.5px;
+    transform: rotate(90deg);
+    margin-left: 5px;
+}
+
+.head2 .dropdownTitle .close.rotated::after{
+    transform :rotate(270deg);
+}
+
+
+.dropdownPills{
+    padding: 12px;
+    width: min-content;
+    z-index: 200;
+    border-radius: 4px;
+    box-shadow: rgb(230 230 230) 0px 2px 0px 0px, rgb(0 0 0 / 10%) 0px 0px 20px 0px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    scroll-behavior: smooth;
+}
+.dropdownPills .pill{
+    height: 28px;
+    font-size: 12.5px;
+    border-radius: 14px;
+    line-height: 28px;
+    margin: 5px;
+    padding: 0px 12px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(117, 117, 117);
+}
+.dropdownPills{
+    display: none;
+}
+.dropdownPills.show{
+    display: block;
+}
