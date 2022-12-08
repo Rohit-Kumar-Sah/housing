@@ -1171,7 +1171,7 @@ p.hamburger img {
 /* report page  */
 
 .breadcrumbs{
-    padding-top: 10px;
+    padding-top: 50px;
 }
 
 .breadcrumbs div{
@@ -1269,7 +1269,7 @@ p.hamburger img {
     border-top: 1px solid #e9e9e9;
     box-shadow: 0 4px 6px 0 rgb(0 0 0 / 12%);
     position: sticky;
-    top: 0;
+    top: 42px;
     width: 100vw;
     background-color: #fff;
     max-width: 100%;
@@ -1491,7 +1491,8 @@ section.developer{
     position: sticky;
     flex: 1 1 27%;
     height: max-content;
-    top: 45px;
+    top: 100px;
+
 }
 .contact_Seller > div{
     background-color: #fff;
@@ -1734,7 +1735,9 @@ p.faq_title {
     }
     .tabbedContent div.scrollspy{
         padding: 5px 5vw 0;
+        top: 0;
     }
+    
     .overview_Title,
     .developer_title,
     .below_price_title,
@@ -2130,6 +2133,8 @@ hr.screenLBlock{
     width: 100%;
     display: flex;
     align-items: center;
+    position: fixed;
+    z-index: 500;
 }
 .head1 .logo{
     height: 100%;
@@ -2388,4 +2393,11 @@ hr.screenLBlock{
 }
 .dropdownPills.show{
     display: block;
+}
+
+@media screen and (max-width:1023px){
+
+.head1{
+    display: none;
+}
 }

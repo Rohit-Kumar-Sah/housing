@@ -1,5 +1,37 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   // header option
+  const headeroptions = {
+    // root: document.querySelector(".tabbedContent"),
+    rootMargin: `-${
+      document.querySelector(".head1")?.getBoundingClientRect().height
+    }px 0px 0px 0px `,
+    threshold: [0, 1],
+  };
+
+  // head1 section callback
+  function headCallback(entries, observer) {
+    entries.forEach((entry) => {
+      console.log("b", entry);
+      if (
+        entry.rootBounds.top <
+        entry.boundingClientRect.top + entry.boundingClientRect.height
+      ) {
+        activateThisTab(entry);
+        console.log("hora head in");
+        entry.target.classList.add("in");
+      }
+      if (
+        entry.rootBounds.top >=
+        entry.boundingClientRect.top + entry.boundingClientRect.height
+      ) {
+        activateThisTab(entry);
+        entry.target.classList.remove("in");
+        console.log("hora head out");
+      }
+    });
+  }
+  let headObserver = new IntersectionObserver(headCallback, headeroptions);
+  headObserver.observe(document.querySelector(".scrollspy"));
 
   // tabbed carousel acivation
 
