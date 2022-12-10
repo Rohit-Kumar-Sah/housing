@@ -106,7 +106,9 @@ a,button{
     top: 0px;
     transform: translate(-50%,50%);
 }
-p.hamburger img {
+p.hamburger img ,
+div.hamburger img 
+{
     height: 30px;
 }
 
@@ -643,6 +645,7 @@ p.hamburger img {
     right: 0;
     top: 0;
     display: none;
+    z-index: 104;
 }
 .quickNavContent {
     display: none;
@@ -1171,7 +1174,7 @@ p.hamburger img {
 /* report page  */
 
 .breadcrumbs{
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .breadcrumbs div{
@@ -1269,7 +1272,7 @@ p.hamburger img {
     border-top: 1px solid #e9e9e9;
     box-shadow: 0 4px 6px 0 rgb(0 0 0 / 12%);
     position: sticky;
-    top: 42px;
+    top: 95px;
     width: 100vw;
     background-color: #fff;
     max-width: 100%;
@@ -1562,10 +1565,10 @@ section.developer{
     background-color: #fff;
     border: 1px solid #5e23dc;
     color: #5e23dc;
-    padding: 0 8px;
+    padding: 16px;
 }
 .contact_button .contact{
-    padding: 12px;
+    padding: 16px;
     background: #7f7f7f;
     border: none;
     color: #fff;
@@ -1718,7 +1721,7 @@ p.faq_title {
     }
     .house_info{
         width: 95vw;
-        margin-top: 12px;
+        margin-top: 50px;
     }
     .overview_cell{
         flex: 1 1 50%;
@@ -1735,7 +1738,7 @@ p.faq_title {
     }
     .tabbedContent div.scrollspy{
         padding: 5px 5vw 0;
-        top: 0;
+        top: 43px;
     }
     
     .overview_Title,
@@ -2126,15 +2129,15 @@ hr.screenLBlock{
  /* report header  */
 
  .report header{
-    z-index: 200;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
  }
 .head1{
     background-color: rgb(94, 35, 220);
     width: 100%;
     display: flex;
     align-items: center;
-    position: fixed;
-    z-index: 500;
 }
 .head1 .logo{
     height: 100%;
@@ -2394,10 +2397,270 @@ hr.screenLBlock{
 .dropdownPills.show{
     display: block;
 }
+.head1.mobile{
+display: none;
+}
 
 @media screen and (max-width:1023px){
 
-.head1{
+.head1,.head2{
     display: none;
 }
+.head1.mobile{
+    display: flex;
+    position: fixed;
+    top: 0;
+
+    
+}
+.mobile .topNavs{
+    align-items: center;
+
+}
+.searchglass,.hamburger{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.searchglass img{
+    height: 30px;
+}
+.mobile .hamburger  {
+    position: static;
+    transform: none;
+}
+}
+@media screen and (max-width:520px){
+    .mobile .dApps{
+        display: none;
+    }
+}
+
+.quickNavSearchContent{
+    z-index: 1000;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+  
+}
+.quickNavSearchContent > div:first-child{
+    background-color: rgb(242, 243, 248);
+}
+.quickNavSearchContent > div{
+    padding: 0 15px;
+
+}
+.topSection{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: fixed;
+    background-color: rgb(242, 243, 248);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+.currCity{
+    line-height: 50px;
+    font-size: 12px;
+    max-width: 56vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.currCity span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.in_searchbar{
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+.nblocality,.localityPills{
+    margin-bottom: 15px;
+}
+.locationPills{
+    margin-bottom: 25px;
+
+}
+
+.backArrow::before{
+    content: "";
+    font-family: housing_phoenix;
+    margin: 0 20px 0 10px;
+}
+.in_searchglass{
+    top: 50%;
+    transform: translate(100%,-50%);
+    position: absolute;
+}
+.in_searchglass::before{
+    content: "";
+    font-family: housing_phoenix;
+}
+.in_searchbar input{
+    border: none;
+    background-color: rgb(220, 218, 224);
+    width: 100%;
+    padding: 0 25px 0 40px;
+    height: 35px;
+    border-radius: 25px;
+    height: 40px;
+}
+.mlocalityPill,
+.locationpill,
+.appliedFiltersPill{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 34px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgba(94, 11, 224, 0.08);
+    color: rgb(94, 35, 220);
+    margin: 0px 8px 0px 0px;
+    padding: 0px 15px;
+    font-weight: 500;
+}
+.mlocalityPill{
+    padding: 6px 15px;
+}
+.addMorePill{
+    white-space: nowrap;
+    background-color: rgb(94, 11, 224);
+    color: rgb(255, 255, 255);
+}
+.localityPills{
+    display: flex;
+    overflow-x: auto;
+   align-items: center;
+   padding-bottom: 20px;
+}
+.localityPill{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.susLocalityName{
+    padding-left: 9px;
+}
+.locationpill::after,
+.appliedFiltersPill::after{
+    font-size: 8px;
+    content: "";
+    font-family: housing_phoenix;
+    margin-left: 8px;
+}
+.infodet1{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(94, 35, 220, 0.85);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 8px;
+}
+.infodet2{
+    line-height: 8px;
+    color: rgb(118, 118, 118);
+    font-size: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.locationNearby::before{
+    content: "";
+    font-family: housing_phoenix;
+    margin-right: 8px;
+}
+.locationNearby{
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.mfilter{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.mclear{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.54);
+}
+div.filterBar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0 0 0 / 13%) ;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+div.appliedFilters{
+    border-bottom: 1px solid rgb(0 0 0 / 13%) ;
+    padding-bottom: 20px;
+}
+.appliedFilters>p{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.appliedFiltersPills{
+    display: flex;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.bhkTypeTitle,.PropTypeTitle,.saleTypeTitle{
+    line-height: 16px;
+    opacity: 0.8;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    margin: 15px 0;
+    display: block;
+}
+.bhkOptions,.PropTypeOptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.optionBox{
+    flex: 0 0 48%;
+    opacity: 0.7;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid rgb(178, 178, 178);
+    line-height: 42px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0px 8px;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.saleTypeOption{
+    opacity: 0.8;
+}
+.saleTypeOption input{
+    margin-right: 10px ;
+    margin-bottom: 10px;
+}
+
+.optionBox.active{
+    color: rgb(94, 35, 220);
+    opacity: unset;
+    background-color: rgba(94, 11, 224, 0.1);
+    border: 1px solid rgba(94, 11, 224, 0.1);
+}
+div.saleType{
+    margin-bottom: 20px;
 }

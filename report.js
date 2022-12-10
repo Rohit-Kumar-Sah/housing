@@ -1,44 +1,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  // header option
-  const headeroptions = {
-    // root: document.querySelector(".tabbedContent"),
-    rootMargin: `-${
-      document.querySelector(".head1")?.getBoundingClientRect().height
-    }px 0px 0px 0px `,
-    threshold: [0, 1],
-  };
-
-  // head1 section callback
-  function headCallback(entries, observer) {
-    entries.forEach((entry) => {
-      console.log("b", entry);
-      if (
-        entry.rootBounds.top <
-        entry.boundingClientRect.top + entry.boundingClientRect.height
-      ) {
-        activateThisTab(entry);
-        console.log("hora head in");
-        entry.target.classList.add("in");
-      }
-      if (
-        entry.rootBounds.top >=
-        entry.boundingClientRect.top + entry.boundingClientRect.height
-      ) {
-        activateThisTab(entry);
-        entry.target.classList.remove("in");
-        console.log("hora head out");
-      }
-    });
-  }
-  let headObserver = new IntersectionObserver(headCallback, headeroptions);
-  headObserver.observe(document.querySelector(".scrollspy"));
-
   // tabbed carousel acivation
 
   const options = {
     // root: document.querySelector(".tabbedContent"),
     rootMargin: `-${
-      document.querySelector(".scrollspy")?.getBoundingClientRect().height
+      document.querySelector(".scrollspy")?.getBoundingClientRect().height +
+      document.querySelector(".head1.mobile")?.getBoundingClientRect().height
     }px 0px 0px 0px `,
     threshold: [0, 1],
   };
@@ -209,7 +176,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
           clearInterval(scrollDone);
           // console.log(" finished scrolling");
           window.scrollBy({
-            top: -50,
+            top: -90,
             left: 0,
             behavior: "instant",
           });

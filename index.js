@@ -193,4 +193,60 @@ window.addEventListener("DOMContentLoaded", (event) => {
         .classList.toggle("active");
     });
   });
+
+  document
+    .querySelector(".report .backArrow")
+    ?.addEventListener("click", (e) => {
+      document.querySelector(".quickNavSearchContent").style.display = "none";
+
+      document.querySelectorAll(".report > section")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".report > header")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".report > footer")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".report > div")?.forEach((ele) => {
+        if (!ele.classList.contains("quickNavSearchContent")) {
+          ele.style.display = "block";
+        }
+      });
+      [
+        document.querySelector(".breadcrumbs"),
+        document.querySelector(".mplaces"),
+        document.querySelector(".quickNavOverlay"),
+        document.querySelector(".quickNavContent"),
+      ]?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+    });
+
+  document
+    .querySelector(".report .searchglass")
+    ?.addEventListener("click", (e) => {
+      document.querySelector(".quickNavSearchContent").style.display = "block";
+
+      document.querySelectorAll(".report > section")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".report > header")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".report > footer")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".report > div")?.forEach((ele) => {
+        if (!ele.classList.contains("quickNavSearchContent")) {
+          ele.style.display = "none";
+        }
+      });
+    });
 });
