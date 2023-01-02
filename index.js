@@ -154,23 +154,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // see more/less
-
+  /*
   [
-    document.querySelector(".seeMore"),
-    document.querySelector(".seeLess"),
+    ...document.querySelectorAll(".seeMore"),
+    ...document.querySelectorAll(".seeLess"),
   ].forEach((ele) => {
     ele?.addEventListener("click", (event) => {
-      document.querySelector(".seeMore").classList.toggle("remove");
-      document.querySelector(".seeLess").classList.toggle("remove");
-      document.querySelector(".completeInfo").classList.toggle("remove");
+      event.target.parentNode(".seeMore").classList.toggle("remove");
+      event.target.parentNode(".seeLess").classList.toggle("remove");
+      event.target.parentNode(".completeInfo").classList.toggle("remove");
     });
   });
-
-  //show more/less
-
+  */
   [
     document.querySelector(".about_button_more"),
-    document.querySelector(".about_button_less"),
+    document.querySelector(".about_button_less")
   ].forEach((ele) => {
     ele?.addEventListener("click", (event) => {
       document.querySelector(".about_button_more").classList.toggle("remove");
@@ -178,6 +176,37 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.querySelector(".about_content p").classList.toggle("halfed");
     });
   });
+  
+  document.querySelectorAll(".seeMore").forEach((ele) => {
+    ele?.addEventListener("click", (event) => {
+      event.target.parentNode
+        .querySelector(".seeMore")
+        .classList.toggle("remove");
+      event.target.parentNode
+        .querySelector(".seeLess")
+        .classList.toggle("remove");
+      event.target.parentNode
+        .querySelector(".completeInfo")
+        .classList.toggle("remove");
+    });
+  });
+  document
+    .querySelectorAll(".seeLess")
+    .forEach((ele) => {
+      ele?.addEventListener("click", (event) => {
+        event.target.parentNode
+          .querySelector(".seeMore")
+          .classList.toggle("remove");
+        event.target.parentNode
+          .querySelector(".seeLess")
+          .classList.toggle("remove");
+        event.target.parentNode
+          .querySelector(".completeInfo")
+          .classList.toggle("remove");
+      });
+    })
+
+  
 
   //quickmenu accordion
   document.querySelectorAll(".qmenu_title")?.forEach((ele) => {

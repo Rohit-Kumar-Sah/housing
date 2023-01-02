@@ -224,13 +224,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
       document.querySelector(".textSearchBar").classList.add("hideSearch");
       document.querySelector(".searchbar").classList.remove("hideSearch");
     }
-    // if (
-    //   !e.target.closest(".dropdown") ||
-    //   document.querySelector(".dropdownPills.show")
-    // ) {
-    //   console.log("wwp");
-    //   document.querySelector(".dropdownPills.show")?.classList.remove("show");
-    //   document.querySelector(".close.rotated")?.classList.remove("rotated");
-    // }
   });
 });
