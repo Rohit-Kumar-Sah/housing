@@ -2593,7 +2593,7 @@ hr.screenLBlock {
     font-size: 12.5px;
     border-radius: 13px;
     line-height: 25px;
-    display: inline-block;
+    display: block;
     margin: 0 2px;
     padding: 0 10px;
     color: #fff;
@@ -3404,9 +3404,11 @@ strong {
     color: #5e23dc;
     margin-right: 10px;
     height: fit-content;
+    white-space: nowrap;
 }
 
 .conta {
+    width: 100%;
     height: fit-content;
     font-size: 14px;
     line-height: 20px;
@@ -3482,6 +3484,10 @@ div.smd {
 }
 
 @media screen and (max-width:1024px) {
+    .mdate {
+        margin: 5px 0 7px;
+    }
+
     .listing section {
         flex-direction: column;
         padding-left: 3px;
@@ -3517,11 +3523,19 @@ div.smd {
 
     .sleft,
     .sright {
-        padding-top: 50px;
+        padding-top: 30px;
+    }
+
+    .sortme {
+        display: none;
+    }
+
+    div.top_cont {
+        display: block;
     }
 
     .top_des {
-        top: 43px;
+        top: 40px;
     }
 
     .sright {
@@ -3537,7 +3551,8 @@ div.smd {
 
 
     .extrainfo.desk,
-    .prof.desk {
+    .prof.desk,
+    .lemi {
         display: none;
     }
 
