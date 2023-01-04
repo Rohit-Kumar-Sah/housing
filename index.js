@@ -255,6 +255,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
       });
     });
 
+    document
+    .querySelector(".listing .backArrow")
+    ?.addEventListener("click", (e) => {
+      document.querySelector(".quickNavSearchContent").style.display = "none";
+
+      document.querySelectorAll(".listing > section")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".listing > header")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".listing > footer")?.forEach((ele) => {
+        ele.style.display = "block";
+      });
+
+      document.querySelectorAll(".listing > div")?.forEach((ele) => {
+        if (!ele.classList.contains("quickNavSearchContent")) {
+          ele.style.display = "block";
+        }
+      });
+      [
+        document.querySelector(".quickNavOverlay"),
+        document.querySelector(".quickNavContent"),
+      ]?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+    });
+
   document
     .querySelector(".report .searchglass")
     ?.addEventListener("click", (e) => {
@@ -273,6 +303,30 @@ window.addEventListener("DOMContentLoaded", (event) => {
       });
 
       document.querySelectorAll(".report > div")?.forEach((ele) => {
+        if (!ele.classList.contains("quickNavSearchContent")) {
+          ele.style.display = "none";
+        }
+      });
+    });
+
+    document
+    .querySelector(".listing .searchglass")
+    ?.addEventListener("click", (e) => {
+      document.querySelector(".quickNavSearchContent").style.display = "block";
+
+      document.querySelectorAll(".listing > section")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".listing > header")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".listing > footer")?.forEach((ele) => {
+        ele.style.display = "none";
+      });
+
+      document.querySelectorAll(".listing > div")?.forEach((ele) => {
         if (!ele.classList.contains("quickNavSearchContent")) {
           ele.style.display = "none";
         }
