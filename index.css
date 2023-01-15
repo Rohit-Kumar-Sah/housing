@@ -3170,7 +3170,7 @@ div.saleType {
 }
 
 .listing section {
-    padding: 10px 5vw;
+    padding: 50px 5vw 10px;
     display: flex;
     background-color: #f4f4f4;
 }
