@@ -2769,6 +2769,10 @@ hr.screenLBlock {
     width: max-content;
 }
 
+.lmfilters .dropdown {
+    border-radius: 15px;
+}
+
 .head2 .dropdownTitle,
 .listing .dropdownTitle {
     padding: 10px 15px;
@@ -2843,10 +2847,25 @@ hr.screenLBlock {
     }
 
     .head1.mobile {
-        display: flex;
+        display: block;
         position: fixed;
         top: 0;
+        box-shadow: 0 2px 12px 0 rgb(220 198 198 / 12%);
 
+    }
+
+    .lmtop,
+    .lmfilters {
+        display: flex;
+    }
+
+    .lmfilters {
+        background-color: #fff;
+    }
+
+    .listing .lmfilters .dropdownTitle {
+        padding: 5px;
+        color: rgb(137, 138, 137);
 
     }
 
